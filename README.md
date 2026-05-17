@@ -4,39 +4,40 @@ This repository contains the code and methodology for applying **FinBERT** (a fi
 
 ---
 
-## 📁 Repository Structure
-MyAnalysis/
-├── finbert_analysis_EON.ipynb # Main analysis notebook
-└── Output_Results/ # Sentence-level sentiment CSV files
-
-text
+## Repository Structure
 
 ---
 
-## 📊 Output Example
+## Output Example
 
 Each CSV file contains:
 
 | Column | Description |
 |--------|-------------|
-| `sentence` | Original text from the PDF |
-| `sentiment` | positive / negative / neutral |
-| `positive_score` | Confidence score for positive |
-| `negative_score` | Confidence score for negative |
-| `neutral_score` | Confidence score for neutral |
+| sentence | Original text from the PDF |
+| sentiment | positive / negative / neutral |
+| positive_score | Confidence score for positive |
+| negative_score | Confidence score for negative |
+| neutral_score | Confidence score for neutral |
 
 ---
 
-## 🔧 Methodology
+## Methodology
 
-1. **Text Extraction**: Extract text from PDFs using `pypdf`
-2. **Sentence Tokenization**: Split into sentences using NLTK's `punkt`
-3. **Sentiment Analysis**: FinBERT inference via Hugging Face Transformers
-4. **Export**: Save results to CSV with confidence scores
+1. Text Extraction using pypdf
+2. Sentence Tokenization using NLTK punkt
+3. FinBERT inference via Hugging Face
+4. Export results to CSV
 
 ---
 
-## 📦 Requirements
+## Requirements
+---
 
-```bash
-pip install pypdf transformers torch pandas numpy tqdm nltk
+## How to Run
+
+1. Place PDF files in the same folder as the notebook
+2. Run finbert_analysis_EON.ipynb
+3. Results saved in Output_Results/
+
+---
